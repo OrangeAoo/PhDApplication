@@ -1,0 +1,353 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{inter} 
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=1cm,
+    bottom=1cm,
+    left=2cm,
+    right=2cm
+}
+\usepackage[
+    skip=10pt,
+    indent=0pt,
+]{parskip}
+\usepackage{changepage}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{\checkmark}
+\renewcommand{\labelitemii}{$\circ$}
+\setlist[itemize]{
+    topsep=-6pt,
+    itemsep=-6pt,
+    left=10pt,
+}
+\setlist[enumerate]{
+    topsep=-8pt,
+    itemsep=-6pt,
+    left=20pt,
+    align=left
+}
+\setlist[description]{
+    itemsep=0pt,
+    % color=Sepia
+}
+
+\usepackage[dvipsnames]{xcolor}
+\colorlet{org}{gray!40!orange}
+\colorlet{lg}{gray!80!white}
+\newcommand{\org}{\color{org}}
+\newcommand{\wg}{\color{lg}}
+
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\org\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\fontseries{bold}\selectfont}{}{}{\rvs}
+\titleformat{\subsubsection}{\wg\fontseries{bold}\selectfont}{}{}{}
+
+\usepackage{xhfill} 
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[gray]} % add rule after title in .5 x-height 
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{References.bib}
+
+\newif\ifRemVS % remove vspace between \section & \subsection
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+\hypersetup{ 
+    colorlinks=true,
+    urlcolor=Sepia,
+    pdftitle={My Resume},
+    linkcolor=Sepia,
+    filecolor=Sepia,
+}
+
+\newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
+\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\textbf{my GitHub repository}}}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+%== HEADER ==%
+\begin{center}      
+    {\fontsize{28}{28}\selectfont Orange(Yingzhi) Ao} \\ \vspace{5pt}
+    {\org\faEnvelope[regular]}\ \href{mailto:ya2538@columbia.edu}{ya2538@email.com} \hfill
+    {\org\faIcon{mobile-alt}}\ \href{tel:+1 9175184578}{+1 917-518-4578} \hfill
+    {\org\faGithub} \href{https://github.com/OrangeAoo}{My GitHub Page}  \hfill
+    {\org\faLinkedin} \href{linkedin.com/in/orange-ao}{My LinkedIn Page}
+\end{center}
+
+\section{About me}  %========================== About me ==========================%
+
+\textit{Cultivated by the past related experiences, my keen interest in FBSDEs and stochastic control optimization has led me to pursue a PhD, where I aim to develop innovative methodologies to enhance risk management strategies in dynamic financial environments.}
+
+{\org \itshape References available upon request.}
+
+\section{Education}  %========================== Edu ==========================%
+
+\subsection{Columbia University  \normalfont \hfill Visiting Student \hfill 2024}
+\textbf{GPA}: 4.17 (Straight-A)\\
+\textbf{Related Courses}
+\begin{itemize}
+    \item[\checkmark] Programming:\\
+    \hypertarget{PM}{Predictive Modeling with R}(A), DS in Finance And Insurance(A+), Statistic ML(A), 
+    \item[\checkmark] Math:\\
+    Applied Stochastic Processes(A+)
+    \item[\checkmark] Integrated Project:\\
+    Insurance Pricing with ML(A+)
+\end{itemize} 
+\subsection{Nanjing University \normalfont \hfill Bachelor of Economics (Financial Engineering)  \hfill 2021-2025}
+
+\textbf{GPA:} 92\\
+\textbf{Related Courses}
+\begin{itemize}
+    \item[\checkmark] Programming \& ML: \\
+    \quad Python, Numerical Analysis and Application Software(MATLAB), *Financial Engineering, Applied Statistics II: Time Series (with Python), *\hypertarget{FinTS}{Financial Time Series} (with R), *AI
+    \item[\checkmark] Math \& Stats: \\
+    \quad Probability Theory and Mathematical Statistics, Calculus I \& II, Discrete Mathematics, Linear Algebra, ODE, *PDE, *Mathematics Finance
+    \item[\checkmark] Finance:\\
+    \quad Econometrics, Financial Risk Management, Securities Investment, *Options Investing Theories And Practices, Corporate Finance, Microeconomics, Macroeconomics, Accounting, International Finance, International Trade
+\end{itemize}
+\begin{quote}
+    \itshape
+    * is added before courses in progress.
+\end{quote}
+
+\section{Research Experiences And Publications}  %========================== RA ==========================%
+
+\hypertarget{FBSDEs}{
+    \subsection{Multi-Period Compliance MFG-FBSDEs in REC Market \normalfont \hfill RA \hfill 2024}}
+    
+\subsubsection{Columbia University Stats Department}
+\vspace{3pt}
+\begin{adjustwidth}{10pt}{}
+    Under prof Campbell's supervision, I worked as an RA on the extended topic to his work \textit{"Deep learning for principal-agent mean field
+games."} \cite{SC} and its application in REC markets. Here are the major things I did.
+\end{adjustwidth}
+
+\begin{itemize}
+    \item Built up the FBSDE-MFG model and NN framework with PyTorch to reproduced the results of 1-Period-2-Agent Model in \cite{SC}.
+    \item Added additional period to the previous model and framework: Joint Optimization Model, considering for not just current but also future quotas. 
+    \item Proposed 3 numeric tricks to improve the model stability in seek of desired convergence: \textit{clamp}, \textit{sigmoid approximation}, and \textit{logit transformation}.
+    \item Experimented with different combos of NN model settings (e.g. optimizer, scheduler, layers etc.), parameters (e.g. lr), numeric tricks, and loss functions.
+    \item Proposed a benchmark model - Separate Optimization Model - by running the 1P2A model twice, which gives a better view of differences made by long/short-sighted perspectives. 
+    \item Wrapped up codes into well-defined packages, published to \MFG\ together with README instructions. 
+    \item Wrote a Report-Overview for big pictures and Report-Stepwise for detailed math and algorithm illustrations. 
+\end{itemize}
+
+
+
+\subsection{Low-carbon Transition of China's Power System \normalfont \hfill RA \hfill 2023} 
+\subsubsection{Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation} 
+\vspace{3pt}
+\begin{adjustwidth}{10pt}{}
+    Under supervision of main researcher Yang Qu, I assisted \TCJCGLT\ in completion of the research report series "Low-carbon Transition of China's Power System". My major works are as follows.
+\end{adjustwidth}
+
+\begin{itemize}
+    \item Focused on 2 sections as major researcher and author of the report series.
+    \begin{itemize}
+        \item Construction of the national carbon market in China: key problems in market mechanism design and policy recommendations.
+        \item Offshore wind industry in low-carbon transition: bottleneck and future.
+    \end{itemize}
+    \item Visualization - made all figures and tables for the report series. 
+    \item Collected references for other sections of the report series. 
+    \item Assisted completing and proof-reading the draft versions.
+\end{itemize}
+
+\hypertarget{project-exp}{
+    \section{Project Experiences}
+}
+\hypertarget{integrated}{
+    \subsection{Machine Learning In Insurance Pricing And Risk Modeling \normalfont \hfill 2024.05\,-\,2024.08} 
+}
+
+\subsubsection{Columbia University Actuarial Department} 
+\vspace{3pt}
+\begin{itemize}
+    \item\begin{description}
+        \item[Team Collaboration] Collaborated with a team under supervision and mentoring of Carlos (Arocha Association) to carry out an innovative model for data-driving insurance pricing strategy.
+    \end{description}
+    \item\begin{description}
+        \item[Risk Modeling In Python] Innovatively leveraged unsupervised learning (K-Means, PCA, etc.) to identify risk levels based on policy data. Developed exposure rating methods to estimate risk premiums and prices for policies in each risk level.
+    \end{description}
+    \item\begin{description}
+        \item[Professional Reporting And Presenting] Delivered professional Statement of Work and Reports. Presented findings and consulting advice to clients.
+    \end{description}
+\end{itemize} 
+
+\subsection{Innovated Paired Trading Optimization with Genetic Algorithm \normalfont \hfill 2023.09}
+\subsubsection{Self-Motivated Personal Project}
+\begin{itemize}
+    \item\begin{description}
+        \item[Innovation] Replaced traditional single-belt with double-bound, which leads to less fluctuations and greater stability.
+    \end{description}
+    \item\begin{description}
+        \item[Genetic Algorithm] Learned GA from scratch and applied it to parameter optimization (i.e. coefficient, bandwidth), and customized fitness functions(e.g. Sharpe-based to Return-based).
+    \end{description}
+\end{itemize}
+
+\subsection{WorldQuant Brain Consultant | Alphathon (Gold) \normalfont  \hfill 2023}
+\subsubsection{Remote}
+\begin{itemize}
+    \item\begin{description}
+        \item[Participate in NJU Alphathon 2023] Won the gold medal with monetary rewards by submitting qualified alphas. (11th place out of more than 200 candidates)
+    \end{description}
+    \item\begin{description}
+        \item[Contracted Consultant] Submitted qualified alphas and received allowances. 
+    \end{description}
+\end{itemize}  
+
+\hypertarget{intern-exp}{
+    \section{Internship Experiences}
+}
+\subsection{TrexQuant Investment GAR Alpha Researcher 2024.06 - 2024.08}
+\subsubsection{Remote}
+\begin{itemize}
+    \item\begin{description}
+        \item[Market Psycology And Behavioral Investing] Focused on behavioral finance, refine ideas from papers and researches and transform ideas into alphas. Examined and submitted alphas through internal system(Trex Pysim).
+    \end{description}
+\end{itemize}
+
+\subsection{Chongwen Quantitative \normalfont\hfill Quantitative Strategy Researcher (Stock) \hfill 2023.09 - 2024.02}
+\subsubsection{Remote}
+\begin{itemize}%[left=5pt]
+    \item \begin{description}
+        \item[Optimization of "Whitney George" Strategy] 
+        Optimized the strategy parameters w.r.t. A-stock market, leading to an excess of 29\% to the annual return of SSE 300 Index (2018-Q1 to 2023-Q4). The strategy is expected to be used for real trading from 2024-Q4 on.
+    \end{description}
+    \item \begin{description}
+        \item[Construction And Maintenance of Trading System] 
+        Daily simulated the trading and generated formatted trading documents including strategy performance and re-balancing instructions.
+    \end{description}
+\end{itemize}
+
+\hypertarget{extra}{
+\section{Extracurricular Activities}
+}
+\subsection{Presendent of NFEA External Relations Department \normalfont \hfill 2023-now}
+As a self-managed non-profit association, we aim to broaden members' career opportunities and potentials through reaching out to companies and recruiters. I am responsible for leading the core members and am in charge of the reach-out affairs. 
+\subsection{Core Member of  Columbia College VESC \normalfont \hfill 2024}
+I took the lead in organizing "Eastern Egg Hunting" and assisted organizing other 3 monthly activities, which helped to bring international students together and cultivate a sense of belonging. 
+
+\section{Skills}
+
+\subsection{Programming}
+\begin{itemize}
+    \item\begin{description}
+            \item[Python | PyTorch, Pandas, Numpy, sklearn, etc.] 
+            Constructed DL models in the \hyperlink{FBSDEs}{Summer Research, 2024} with Pytorch, familiar with common bugs and resolutions; advanced my DS and ML knowledge through \hyperlink{intern-exp}{intership}, \hyperlink{project-exp}{projects} experiences, and courses \textit{(school and coursera)}.
+    \end{description}
+    \item\begin{description}
+        \item[R | LM, GLM, tree models.] 
+        Accomplished course assignments in \hyperlink{PM}{PM} and \hyperlink{FinTS}{FinTS}; also achieved A in PM (rank 1 in midterm exam).
+    \end{description}
+    \item \begin{description}
+        \item[Other less proficient languages | C++, MATLAB] 
+        Earned CCF CSP-S 2nd Class Certificate in high school; accomplished course work and exams with MATLAB.
+    \end{description}
+\end{itemize}
+
+\subsection{Academic Writing And Professional Typesetting}
+\begin{itemize}
+    \item\begin{description}
+        \item[\LaTeX | Academic Report Writing] 
+        I used Overleaf for purposes ranging from research reports to CV, which improves my \LaTeX skills.
+    \end{description}
+    \item\begin{description}
+        \item[MicroSoft | Professional Report Writing] 
+        My real-world experiences from internships and \hyperlink{integrated}{mentorship of Carlos} equipped me with professional typsetting skills, like meeting agendas, minutes as well as statements of work.
+    \end{description}
+\end{itemize}
+
+\subsection{English}
+\begin{itemize}
+    \item \begin{description}
+        \item[Proficiency Tests | TOEFL - 111/120 | GRE 333/340]  
+    \end{description}
+    \item \begin{description}
+        \item[Oversea Experiences] Lived in NY for 8 months and made bunch of native friends who help me getting rather good at daily communication.
+    \end{description}
+\end{itemize}
+
+\subsection{Team Working And Communicating}
+\begin{itemize}
+    \item\begin{description}
+        \item[Responsibility]
+        I managed to take leading roles in \hyperlink{extra}{extracurricular activities}, responsible for core decision-making and planning, which required me to be assertive and open at the same time.
+    \end{description}
+    \item\begin{description}
+        \item[Collaboration]
+        My diverse experiences in research, internship, course projects, as well as in student associations required me to: 1) navigate my specific role in the team (assistant, mentee, or peer/teammate); 2) ask questions and listen; 3) share constructive and respectful feedback.
+    \end{description}
+    % \item\begin{description}
+    %     \item[Conflict Resolving]
+    %     "Listen without bias, not trying to talk back, but to find the common ground" is the essence I learned, yet through a hard way.
+    % \end{description}
+\end{itemize}
+
+\section{Certifications \& Awards}
+%==============
+% Mentioned most important certificates where you have received some training or award or have delivered a presentation
+%==============
+\begin{itemize}
+    \item \textbf{Qualifications And Competitions}
+    \begin{itemize}
+        \item CCF CSP-S 2nd Class (C++)
+        \item Brain Alphathon 2023 11th Place
+        \item *ACCA \textit{(Passed 7 Out of 13) }
+    \end{itemize}
+    
+    \item \textbf{Scholarships}
+    \begin{itemize}
+        \item Jiangsu Huihong Livestock High Scholarship
+        \item People's Scholarship 
+        \item Guotai Life Scholarship
+    \end{itemize}
+
+    \item \textbf{Others}
+    \begin{itemize}
+        \item Piano \textit{(professional level 10)} 
+        \item Sketch \textit{(professional level 8)}
+        \item Running: The 20th Jiangsu Provincial Games Women's Group 5KM Silver, 10KM Silver \textit{(National 2nd Class Athletes Standard)}; Half-Marathon \textit{(Personal Best 1:27:19)} 
+    \end{itemize}
+    
+\end{itemize}
+
+\section{Appendix}
+
+\subsection{Abbreviations}
+\begin{itemize}
+    \item NN: Neural Network 
+    \item ML: Machine Learning
+    \item DS: Data Science
+    \item NFEA: Nanjing University Financial Engineering Association
+    \item VESC: Visiting And Exchange Student Council
+    \item TCJCGLT: Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation
+    \item CCF CSP-S: China Computer Federation Certified Software Professional-Senior
+\end{itemize}
+
+\subsection{Citation(s)}
+\printbibliography[heading=none]
+\end{document}
