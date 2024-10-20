@@ -42,7 +42,7 @@
 }
 
 \usepackage[dvipsnames]{xcolor}
-\colorlet{org}{gray!40!orange}
+\colorlet{org}{black!80!orange}
 \colorlet{lg}{gray!80!white}
 \newcommand{\org}{\color{org}}
 \newcommand{\wg}{\color{lg}}
@@ -78,7 +78,7 @@
 }
 
 \newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
-\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\textbf{my GitHub repository}}}
+\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{my GitHub repository}}
 
 \usepackage[page]{totalcount}
 \usepackage{fancyhdr}
@@ -106,39 +106,30 @@
 
 \section{Education}  %========================== Edu ==========================%
 
-\subsection{Columbia University  \normalfont \hfill Visiting Student \hfill 2024}
+\subsection{Nanjing University \normalfont \hfill B.A. in Economics - Financial Engineering Experimental Class  \hfill 2021-2025}
 \begin{itemize}
-    \item \textbf{GPA}: 4.17 (Straight-A)
-    \item \textbf{Related Courses}
+    \item \textbf{Overall GPA:} 92/100 \hfill \textbf{Ranking:} 3/31
+    \item \textbf{Relevant Courses}
     \begin{itemize}
         \item\begin{description}
-            \item[Programming] \hypertarget{PM}{**Predictive Modeling (with R)}(A), **DS in Finance And Insurance (with Python) (A+), Statistical ML (with Python) (A)
+            \item[CS] Python, Numerical Analysis and Application Software (with MATLAB), *Financial Engineering, Applied Statistics II: Time Series (with Python), *\hypertarget{FinTS}{Financial Time Series} (with R), *Artificial Intelligence, *Data Mining
         \end{description}
         \item\begin{description}
-            \item[Math] **Applied Stochastic Processes(A+)
+            \item[Math] Probability Theory and Mathematical Statistics , Calculus I \& II, Discrete Mathematics(93, top), Linear Algebra, ODE, *PDE, *Financial Mathematics
         \end{description}
         \item\begin{description}
-            \item[Integrated Project] Insurance Pricing with ML(A+)
-        \end{description} 
-    \end{itemize} 
-\end{itemize}
-
-\subsection{Nanjing University \normalfont \hfill Bachelor of Economics (Financial Engineering)  \hfill 2021-2025}
-\begin{itemize}
-    \item \textbf{GPA}: 92
-    \item \textbf{Related Courses}
-    \begin{itemize}
-        \item\begin{description}
-            \item[Programming] Python, Numerical Analysis and Application Software (with MATLAB), *Financial Engineering, Applied Statistics II: Time Series (with Python), *\hypertarget{FinTS}{Financial Time Series} (with R), *AI
-        \end{description}
-        \item\begin{description}
-            \item[Math And Stats] Probability Theory and Mathematical Statistics, Calculus I \& II, Discrete Mathematics, Linear Algebra, ODE, *PDE, *Mathematics Finance
-        \end{description}
-        \item\begin{description}
-            \item[Economics And Finance] Econometrics, Financial Risk Management, Securities Investment, *Options Investing Theories And Practices, Corporate Finance, Microeconomics, Macroeconomics, Accounting, International Finance, International Trade
+            \item[Finance] Econometrics, Financial Risk Management, Securities Investment, Corporate Finance, Microeconomics, Macroeconomics, *Options Investing, Accounting(100)
         \end{description} 
     \end{itemize} 
 \end{itemize}   
+
+\subsection{Columbia University  \normalfont \hfill Exchange Student \hfill 2024}
+\begin{itemize}
+    \item \textbf{GPA}: 4.17/4.33 (4.0/4.0)
+    \item\begin{description}
+            \item[Relevant Courses] **Applied Stochastic Processes(A+), \hypertarget{PM}{**Predictive Modeling (with R)}(A), **DS in Finance And Insurance (with Python) (A+), **Insurance Pricing with ML(A+), Statistical ML (with Python) (A)
+        \end{description}
+\end{itemize}
 
 \begin{quote}
     \itshape
@@ -146,7 +137,7 @@
     ** is added before grad-level courses.
 \end{quote}
 
-\section{Research Experiences And Publications}  %========================== RA ==========================%
+\section{Research Experiences}  %========================== RA ==========================%
 
 \hypertarget{FBSDEs}{
     \subsection{Multi-Period Compliance MFG-FBSDEs in REC Market \normalfont \hfill RA \hfill 2024}}
@@ -154,18 +145,33 @@
 \subsubsection{Columbia University Stats Department}
 \vspace{3pt}
 \begin{adjustwidth}{10pt}{}
-    Under prof Campbell's supervision, I worked as an RA on the extended topic of his work \textit{"Deep learning for principal-agent mean field
-games."} \cite{SC} and its application in REC markets. Here are the major things I did.
+    Supervised by Prof. Campbell on extending the research project “Deep Learning for Principal-Agent Mean Field Games” and its application to Renewable Energy Certificate (REC) markets
 \end{adjustwidth}
 
 \begin{itemize}
-    \item Built up the FBSDE-MFG model and NN framework with PyTorch to reproduce the results of 1-Period-2-Agent Model in \cite{SC}.
-    \item Added additional period to the previous model and framework: Joint Optimization Model, considering current and future quotas. 
-    \item Proposed 3 numeric tricks to improve the model stability in seek of desired convergence: \textit{clamp}, \textit{sigmoid approximation}, and \textit{logit transformation}.
-    \item Experimented with different combos of NN model settings (e.g. optimizer, scheduler, layers, etc.), parameters (e.g. lr), numeric tricks, and loss functions.
-    \item Proposed a benchmark model - Separate Optimization Model - by running the 1P2A model twice, which gives a better view of differences made by long/short-sighted perspectives. 
-    \item Wrapped up codes into well-defined packages, published to \MFG\ together with README instructions. 
-    \item Wrote a \textit{Report-Overview} for big pictures and \textit{Report-Stepwise} for detailed math and algorithm illustrations. 
+    \item\begin{description}
+        \item[NN Framework With PyTorch] Set up NN models with Deep FBSDEs Solvers to validate the results of 1-period MFG studied in the previous topic.
+    \end{description} 
+    \item\begin{description}
+        \item[Further Topics: FBSDEs For Multi-Period MFG] Extended the FBSDE Model and the NN framework to the multi-compliance case. For the next step, we will make it more realistic by adding more periods and inventory carryforward and expiration rules based on the 2-period model.
+    \end{description} 
+    \item\begin{description}
+        \item[Innovative Numeric Tricks] Proposed and combined 3 numeric tricks to improve the numeric stability compared to the conventional Deep FBSDE Solvers, while seeking a good convergence:
+        \begin{itemize}
+            \item Clamping - restrict values within $[0,1]$ and avoid gradient explosion;
+            \item Sigmoid Approximation - increase differentiability and continuity
+            \item Logit Transformation - mapping $[0,1]$ to $\mathbb{R}$ while providing differentiability.
+        \end{itemize}
+    \end{description}
+    \item\begin{description}
+        \item[Experimenting And Tuning] Experimented with various combos of NN settings (e.g. optimizers, schedulers, and loss functions), and fine-tuned parameters (e.g. learning rate, penalty weights), for the sake of both convergence and stability. 
+    \end{description}
+    \item \begin{description}
+        \item[Benchmarking] Proposed Separate Optimization as a benchmark to the jointly optimized multi-period model (i.e. by running the single-period model twice), which could be interpreted as 2 distinctive perspectives: short-sighted and long-term planning.
+    \end{description}
+    \item \begin{description}
+        \item[Documentation, Typesetting, and GitHub-Publishing] Wrapped the models into well-structured packages and composed READMEs for code instructions. Summarized the period results into an \href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/FBSDE/FinalReports/ReportOverview-MFG-FBSDE.pdf}{Overview Report}. All these works are made public in \MFG. %%, also recorded all maths and algorithm results into a Stepwise Detail Report. 
+    \end{description}
 \end{itemize}
 
 \newpage
@@ -173,24 +179,29 @@ games."} \cite{SC} and its application in REC markets. Here are the major things
 \subsubsection{Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation} 
 \vspace{3pt}
 \begin{adjustwidth}{10pt}{}
-    Under the supervision of main researcher Yang Qu, I assisted \TCJCGLT\ in composing the research report series "Low-carbon Transition of China's Power System". My major works are as follows.
+    Supervised by the lead researcher Yang Qu, I assisted her team in composing the research report series "Low-carbon Transition of China’s Power System". Key responsibilities and contributions are as follows. 
 \end{adjustwidth}
 
 \begin{itemize}
-    \item Focused on 2 sections as a major researcher and author of the report series.
-    \begin{itemize}
-        \item Construction of the national carbon market in China: key problems in market mechanism design and policy recommendations.
-        \item Offshore wind industry in low-carbon transition: bottleneck and future.
-    \end{itemize}
-    \item Visualization - made all figures and tables for the report series. 
-    \item Collected references for other sections of the report series. 
-    \item Assisted in completing and proofreading the draft versions.
+    \item \begin{description}
+        \item[Co-Authorship And Editorial Support] In addition to drafting, reviewing, and proofreading the final versions of the reports, I mainly researched and co-authored two sections of the report series:
+        \begin{itemize}
+            \item Design challenges and policy recommendations in the development of China's national carbon market
+            \item Offshore wind industry’s role in the low-carbon transition - the current bottlenecks and future prospects
+        \end{itemize}
+    \end{description}
+    \item \begin{description}
+        \item[Data Visualization For Whole Reports] Created all figures and tables for the report series to support data-driven insights.
+    \end{description} 
+    \item \begin{description}
+        \item[Reference Collection] Gathered and organized references for the reports. 
+    \end{description}
 \end{itemize}
 
 \hypertarget{project-exp}{
     \section{Project Experiences}
 }
-\hypertarget{integrated}{
+\hypertarget{integrated-project}{
     \subsection{Machine Learning In Insurance Pricing And Risk Modeling \normalfont \hfill 2024.05\,-\,2024.08} 
 }
 
@@ -201,7 +212,7 @@ games."} \cite{SC} and its application in REC markets. Here are the major things
         \item[Team Collaboration] Collaborated with a team under the supervision and mentoring of Carlos (Arocha Association) to carry out an innovative model for a data-driving insurance pricing strategy.
     \end{description}
     \item\begin{description}
-        \item[Risk Modeling In Python] Innovatively leveraged unsupervised learning (K-Means, PCA, etc.) to identify risk levels based on policy data. Developed exposure rating methods to estimate risk premiums and policy prices in each risk level.
+        \item[Innovative Risk Modeling For Insurance Pricing] Leveraged unsupervised learning (K-Means, PCA, etc.) to identify risk clusters based on policy data, which is novel to the current insurance industry. Developed exposure rating methods to estimate risk premiums and policy prices at each risk cluster. 
     \end{description}
     \item\begin{description}
         \item[Professional Reporting And Presenting] Delivered professional Statement of Work and Reports. Presented findings and consulting advice to clients.
@@ -212,10 +223,10 @@ games."} \cite{SC} and its application in REC markets. Here are the major things
 \subsubsection{Self-Motivated Personal Project}
 \begin{itemize}
     \item\begin{description}
-        \item[Innovation] Replaced traditional single-belt with double-bound, which leads to fewer fluctuations and greater stability.
+        \item[Innovation] Different than the traditional single-belt, I developed a double-bound, which significantly reduced fluctuations and trading turnover rate. 
     \end{description}
     \item\begin{description}
-        \item[Genetic Algorithm] Learned GA from scratch and applied it to parameter optimization (i.e. coefficient, bandwidth), and customized fitness functions(e.g. Sharpe-based to Return-based).
+        \item[Genetic Algorithm] Self-taught and applied Genetic Algorithms (GA) to optimize key parameters such as coefficients and bandwidth, and customized fitness functions(e.g. Sharpe-ratio-based to return-based) as more appropriate model metrics. 
     \end{description}
 \end{itemize}
 
@@ -223,143 +234,137 @@ games."} \cite{SC} and its application in REC markets. Here are the major things
 \subsubsection{Remote}
 \begin{itemize}
     \item\begin{description}
-        \item[Participate in NJU Alphathon 2023] Won the gold medal with monetary rewards by submitting qualified alphas. (11th place out of more than 200 candidates)
+        \item[Participate in NJU Alphathon 2023] Secured a gold medal (11th place out of 200+ participants) in the NJU Alphathon 2023, earning monetary rewards by submitting high-quality alphas.
     \end{description}
     \item\begin{description}
-        \item[Contracted Consultant] Submitted qualified alphas and received allowances. 
+        \item[Consultant] Contracted as a consultant to provide qualified alphas and received allowances for successful submissions 
     \end{description}
 \end{itemize}  
 
-\hypertarget{intern-exp}{
-    \section{Internship Experiences}
-}
-\subsection{TrexQuant Investment GAR Alpha Researcher 2024.06 - 2024.08}
-\subsubsection{Remote}
-\begin{itemize}
-    \item\begin{description}
-        \item[Market Psychology And Behavioral Investing] Focused on behavioral finance, refining ideas from papers and research and transforming ideas into alphas. Examined and submitted alphas through the internal system(Trex Pysim).
-    \end{description}
-\end{itemize}
+% \hypertarget{intern-exp}{
+%     \section{Internship Experiences}
+% }
+% \subsection{TrexQuant Investment GAR Alpha Researcher 2024.06 - 2024.08}
+% \subsubsection{Remote}
+% \begin{itemize}
+%     \item\begin{description}
+%         \item[Market Psychology And Behavioral Investing] Focused on behavioral finance, refining ideas from papers and research and transforming ideas into alphas. Examined and submitted alphas through the internal system(Trex Pysim).
+%     \end{description}
+% \end{itemize}
 
-\subsection{Chongwen Quantitative \normalfont\hfill Quantitative Strategy Researcher (Stock) \hfill 2023.09 - 2024.02}
-\subsubsection{Remote}
-\begin{itemize}%[left=5pt]
-    \item \begin{description}
-        \item[Optimization of "Whitney George" Strategy] 
-        Optimized the strategy parameters w.r.t. A-stock market, leading to an excess of 29\% to the annual return of the SSE 300 Index (2018-Q1 to 2023-Q4). The strategy is expected to be used for real trading from 2024-Q4 on.
-    \end{description}
-    \item \begin{description}
-        \item[Construction And Maintenance of Trading System] 
-        Daily simulated the trading and generated formatted trading documents including strategy performance and re-balancing instructions.
-    \end{description}
-\end{itemize}
+% \subsection{Chongwen Quantitative \normalfont\hfill Quantitative Strategy Researcher (Stock) \hfill 2023.09 - 2024.02}
+% \subsubsection{Remote}
+% \begin{itemize}%[left=5pt]
+%     \item \begin{description}
+%         \item[Optimization of "Whitney George" Strategy] 
+%         Optimized the strategy parameters w.r.t. A-stock market, leading to an excess of 29\% to the annual return of the SSE 300 Index (2018-Q1 to 2023-Q4). The strategy is expected to be used for real trading from 2024-Q4 on.
+%     \end{description}
+%     \item \begin{description}
+%         \item[Construction And Maintenance of Trading System] 
+%         Daily simulated the trading and generated formatted trading documents including strategy performance and re-balancing instructions.
+%     \end{description}
+% \end{itemize}
 
-\hypertarget{extra}{
-\section{Extracurricular Activities}
-}
-\subsection{Presendent of NFEA External Relations Department \normalfont \hfill 2023-now}
-As a self-managed non-profit association, we aim to broaden members' career opportunities and potential through reaching out to companies and recruiters. I am responsible for leading the core members and am in charge of the reach-out affairs. 
-\subsection{Core Member of  Columbia College VESC \normalfont \hfill 2024}
-I took the lead in organizing "Eastern Egg Hunting" and assisted in organizing other 3 monthly activities, which helped to bring international students together and cultivate a sense of belonging. 
+% \hypertarget{extra}{
+% \section{Extracurricular Activities}
+% }
+% \subsection{Presendent of NFEA External Relations Department \normalfont \hfill 2023-now}
+% As a self-managed non-profit association, we aim to broaden members' career opportunities and potential through reaching out to companies and recruiters. I am responsible for leading the core members and am in charge of the reach-out affairs. 
+% \subsection{Core Member of  Columbia College VESC \normalfont \hfill 2024}
+% I took the lead in organizing "Eastern Egg Hunting" and assisted in organizing other 3 monthly activities, which helped to bring international students together and cultivate a sense of belonging. 
 
-\newpage
+% \newpage
 \section{Skills}
 
 \subsection{Programming}
 \begin{itemize}
     \item\begin{description}
-            \item[Python | PyTorch, Pandas, Numpy, sklearn, etc.] 
-            Constructed DL models in the \hyperlink{FBSDEs}{Summer Research, 2024} with Pytorch, familiar with common bugs and resolutions; advanced my DS and ML knowledge through \hyperlink{intern-exp}{intership}, \hyperlink{project-exp}{projects} experiences, and courses \textit{(school and coursera)}.
+            \item[Python] Proficient in PyTorch, Pandas, Numpy, sklearn, etc., which can be supported by multiple experiences in building deep learning models and handling data science tasks.
     \end{description}
     \item\begin{description}
-        \item[R | LM, GLM, tree models.] 
-        Accomplished course assignments in \hyperlink{PM}{PM} and \hyperlink{FinTS}{FinTS}; also achieved A in PM (rank 1 in the midterm exam).
+        \item[R] Skilled in LM, GLM, and tree models, with practical application in portfolio management and financial time series.
     \end{description}
     \item \begin{description}
-        \item[Other less proficient languages | C++, MATLAB] 
+        \item[Other languages] Familiar with C++ and MATLAB. Certified with CCF CSP-S 2nd Class. 
         Earned CCF CSP-S 2nd Class Certificate in high school; accomplished coursework and exams with MATLAB.
     \end{description}
 \end{itemize}
 
-\subsection{Academic Writing And Professional Typesetting}
+\subsection{Academic And Professional Typesetting}
 \begin{itemize}
     \item\begin{description}
-        \item[\LaTeX | Academic Report Writing] 
-        I used Overleaf for purposes ranging from research reports to CV, which improved my \LaTeX skills.
-    \end{description}
-    \item\begin{description}
-        \item[MicroSoft | Professional Report Writing] 
-        My real-world experiences from internships and \hyperlink{integrated}{mentorship of Carlos} equipped me with professional typesetting skills, like meeting agendas, minutes as well as Statement of Work.
-    \end{description}
-\end{itemize}
-
-\subsection{English}
-\begin{itemize}
-    \item \begin{description}
-        \item[Proficiency Tests | TOEFL - 111/120 | GRE 333/340]  
+        \item[\LaTeX] Used Overleaf for composing research reports, coursework, CVs, etc. 
     \end{description}
     \item \begin{description}
-        \item[Overseas Experiences] Lived in NY for 8 months and made a bunch of native friends who helped me get rather good at daily communication.
+        \item[Professional Typesetting] Have practical experience in writing professional meeting minutes, statements of work, and presentations. 
     \end{description}
+\end{itemize} 
+
+\subsection{English Proficiency}
+\begin{itemize}
+    \item \textbf{TOEFL} 111/120 | \textbf{GRE} 333/340 
 \end{itemize}
 
-\subsection{Team Working And Communicating}
+\subsection{Team Collaboration And Communication}
 \begin{itemize}
-    \item\begin{description}
-        \item[Responsibility]
-        I managed to take leading roles in \hyperlink{extra}{extracurricular activities}, responsible for core decision-making and planning, which required me to be assertive and open at the same time.
-    \end{description}
-    \item\begin{description}
-        \item[Collaboration]
-        My diverse experiences in research, internship, course projects, as well as in student associations required me to: 1) navigate my specific role in the team (assistant, mentee, or peer/teammate); 2) ask questions and listen; 3) share constructive and respectful feedback.
-    \end{description}
-    % \item\begin{description}
-    %     \item[Conflict Resolving]
-    %     "Listen without bias, not trying to talk back, but to find the common ground" is the essence I learned, yet through a hard way.
-    % \end{description}
+    \item Adaptable in team settings through research projects, internships, and student associations. Skilled in providing constructive feedback and active listening.
 \end{itemize}
+% \begin{itemize}
+%     \item\begin{description}
+%         \item[Responsibility]
+%         I managed to take leading roles in \hyperlink{extra}{extracurricular activities}, responsible for core decision-making and planning, which required me to be assertive and open at the same time.
+%     \end{description}
+%     \item\begin{description}
+%         \item[Collaboration]
+%         My diverse experiences in research, internship, course projects, as well as in student associations required me to: 1) navigate my specific role in the team (assistant, mentee, or peer/teammate); 2) ask questions and listen; 3) share constructive and respectful feedback.
+%     \end{description}
+%     % \item\begin{description}
+%     %     \item[Conflict Resolving]
+%     %     "Listen without bias, not trying to talk back, but to find the common ground" is the essence I learned, yet through a hard way.
+%     % \end{description}
+% \end{itemize}
 
-\section{Certifications \& Awards}
-%==============
-% Mentioned most important certificates where you have received some training or award or have delivered a presentation
-%==============
-\begin{itemize}
-    \item \textbf{Qualifications And Competitions}
-    \begin{itemize}
-        \item CCF CSP-S 2nd Class (C++)
-        \item Brain Alphathon 2023 11th Place
-        \item *ACCA \textit{(Passed 7 Out of 13) }
-    \end{itemize}
+% \section{Certifications \& Awards}
+% %==============
+% % Mentioned most important certificates where you have received some training or award or have delivered a presentation
+% %==============
+% \begin{itemize}
+%     \item \textbf{Qualifications And Competitions}
+%     \begin{itemize}
+%         \item CCF CSP-S 2nd Class (C++)
+%         \item Brain Alphathon 2023 11th Place
+%         \item *ACCA \textit{(Passed 7 Out of 13) }
+%     \end{itemize}
     
-    \item \textbf{Scholarships}
-    \begin{itemize}
-        \item Jiangsu Huihong Livestock High Scholarship
-        \item People's Scholarship 
-        \item Guotai Life Scholarship
-    \end{itemize}
+%     \item \textbf{Scholarships}
+%     \begin{itemize}
+%         \item Jiangsu Huihong Livestock High Scholarship
+%         \item People's Scholarship 
+%         \item Guotai Life Scholarship
+%     \end{itemize}
 
-    \item \textbf{Others}
-    \begin{itemize}
-        \item Piano \textit{(professional level 10)} 
-        \item Sketch \textit{(professional level 8)}
-        \item Running: The 20th Jiangsu Provincial Games Women's Group 5KM Silver, 10KM Silver \textit{(National 2nd Class Athletes Standard)}; Half-Marathon \textit{(Personal Best 1:27:19)} 
-    \end{itemize}
+%     \item \textbf{Others}
+%     \begin{itemize}
+%         \item Piano \textit{(professional level 10)} 
+%         \item Sketch \textit{(professional level 8)}
+%         \item Running: The 20th Jiangsu Provincial Games Women's Group 5KM Silver, 10KM Silver \textit{(National 2nd Class Athletes Standard)}; Half-Marathon \textit{(Personal Best 1:27:19)} 
+%     \end{itemize}
     
-\end{itemize}
+% \end{itemize}
 
-\section{Appendix}
+% \section{Appendix}
 
-\subsection{Abbreviations}
-\begin{itemize}
-    \item NN: Neural Network 
-    \item ML: Machine Learning
-    \item DS: Data Science
-    \item NFEA: Nanjing University Financial Engineering Association
-    \item VESC: Visiting And Exchange Student Council
-    \item TCJCGLT: Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation
-    \item CCF CSP-S: China Computer Federation Certified Software Professional-Senior
-\end{itemize}
+% \subsection{Abbreviations}
+% \begin{itemize}
+%     \item NN: Neural Network 
+%     \item ML: Machine Learning
+%     \item DS: Data Science
+%     \item NFEA: Nanjing University Financial Engineering Association
+%     \item VESC: Visiting And Exchange Student Council
+%     \item TCJCGLT: Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation
+%     \item CCF CSP-S: China Computer Federation Certified Software Professional-Senior
+% \end{itemize}
 
-\subsection{Citation(s)}
-\printbibliography[heading=none]
+% % \subsection{Citation(s)}
+% % \printbibliography[heading=none]
 \end{document}
