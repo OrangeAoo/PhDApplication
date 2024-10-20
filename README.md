@@ -3,7 +3,7 @@
 This a repository for my application materials:
 
 - CV
-- Cover Letter For Emails
+- Cold Emails (Me + Prof_Tailored)
 - SOP
 - PS
 ...
