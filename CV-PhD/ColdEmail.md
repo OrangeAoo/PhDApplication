@@ -2,6 +2,8 @@
 
 ![Sample](image.png)
 
+Hi prof ...
+
 My name is Orange(Yingzhi) Ao and I am completing my B.S. in Financial Engineering.
 
 In 4 sentences, I'm going to show you WHY your research in Principle-Agent MFG and FBSDEs would benefit by having me, using the example of my most related research experience: Multi-Compliance MFG with Innovated Deep FBSDE Solvers (GitHub: https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs)
