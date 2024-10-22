@@ -1,9 +1,11 @@
 \documentclass[a4paper]{article}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{fontawesome5}
 \usepackage{inter} 
-\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\rmdefault}{lmr}
+\renewcommand*{\familydefault}{\rmdefault}
 
 \usepackage{geometry}
 \geometry{
@@ -26,13 +28,13 @@
 \renewcommand{\labelitemi}{$\mygray\bullet$}
 \renewcommand{\labelitemii}{$\mygray\circ$}
 \setlist[itemize,1]{
-    topsep=-6pt,
-    itemsep=-6pt,
+    topsep=-7pt,
+    itemsep=-7pt,
     left=0pt,
 }
 \setlist[itemize,2]{
-    topsep=-8pt,
-    itemsep=-8pt,
+    topsep=-9pt,
+    itemsep=-9pt,
     leftmargin=8pt
 }
 \setlist[enumerate]{
@@ -55,26 +57,15 @@
 \newcommand{\mygray}{\color{lg}}
 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{8pt}{12pt}
-\titlespacing{\subsection}{0pt}{4pt}{0pt}
-\titlespacing{\subsubsection}{0pt}{1pt}{1pt}
-\titleformat{\section}{\org\large\fontseries{bold}\Large\selectfont\uppercase}{}{}{}[\vspace{1pt}\titlerule]
-\titleformat{\subsection}{\fontseries{bold}\selectfont}{}{}{\rvs}
-\titleformat{\subsubsection}{\mygray\fontseries{bold}\selectfont}{}{}{}
+\titlespacing{\section}{0pt}{8pt}{8pt}
+\titlespacing{\subsection}{0pt}{8pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{1pt}
+
+\titleformat{\section}{\org\LARGE\bfseries}{}{}{}[\vspace{0.1pt}\titlerule]
+\titleformat{\subsection}{\bfseries}{}{}{}
+\titleformat{\subsubsection}{\mygray}{}{}{}
 
 \usepackage{xhfill} 
-% \newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[gray]} % add rule after title in .5 x-height 
-
-% \usepackage[style=ieee]{biblatex}
-% \addbibresource{References.bib}
-
-\newif\ifRemVS % remove vspace between \section & \subsection
-\newcommand{\rvs}{
-    \ifRemVS
-        \vspace{-1.5ex}
-    \fi
-    \global\RemVSfalse
-}
 
 \usepackage[bookmarks=false]{hyperref} % [imp!]
 \hypersetup{ 
@@ -85,7 +76,7 @@
     filecolor=Sepia,
 }
 
-\newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
+% \newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
 \newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{my GitHub repository}}
 
 \usepackage[page]{totalcount}
@@ -96,10 +87,14 @@
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage[dvipsnames]{xcolor}
 
+% \usepackage[T1]{fontenc}
+% \usepackage[lining]{InriaSerif}
+% \renewcommand*\oldstylenums[1]{{\fontfamily{InriaSerif-OsF}\selectfont #1}}
+
 \begin{document}
 %== HEADER ==%
 \begin{center}      
-    {\fontsize{28}{28}\selectfont Orange(Yingzhi) Ao} \\ \vspace{10pt}
+    {\fontsize{25}{25}\selectfont\bfseries Orange(Yingzhi) Ao} \\ \vspace{9pt}
     {\org\faEnvelope[regular]}\ \href{mailto:ya2538@columbia.edu}{ya2538@columbia.com} \hfill
     {\org\faIcon{mobile-alt}}\ \href{tel:+1 9175184578}{+1 917-518-4578} \hfill
     {\org\faGithub} \href{https://github.com/OrangeAoo}{Visit My GitHub}  \hfill
@@ -133,12 +128,12 @@ Exchange Student \hfill GPA: 4.17/4.33
 \section{Research Experiences}  %========================== RA ==========================%
 
 \hypertarget{FBSDEs}{
-    \subsection{Multi-Period Compliance MFG-FBSDEs in REC Market \normalfont \hfill RA \hfill 2024}}
+    \subsection{Multi-Period Compliance MFG-FBSDEs with DL \normalfont \hfill RA \hspace{70pt} 2024.05 - Present}}
     
 \subsubsection{Columbia University Stats Department}
 \vspace{3pt}
 % \begin{adjustwidth}{10pt}{}
-    Supervised by Prof. Campbell, I set up NN models with Deep FBSDE Solvers for the multi-period MFG model, as an extended topic to the single-period model. In the next step, we will make it more realistic by adding more periods and inventory carryforward (or expiration) rules to the current framework.
+    Supervised by Prof. Campbell, I set up NN models with Deep FBSDE Solvers for the multi-period MFG in the REC markets, as an extended topic to the single-period model. In the next step, we will make it more realistic by adding more periods and inventory carryforward (or expiration) rules to the current framework.
 % \end{adjustwidth}
 \begin{itemize}
     \item\begin{description}
@@ -146,14 +141,14 @@ Exchange Student \hfill GPA: 4.17/4.33
     \end{description}
     \begin{itemize}
         \item Clamping - restrict values within $[0,1]$ and avoid gradient explosion.
-        \item Sigmoid Approximation - increase differentiability and continuity.
+        \item Sigmoid Approximation - increase continuity and differentiability.
         \item Logit Transformation - map $[0,1]$ to $\mathbb{R}$ while providing differentiability.
     \end{itemize}
     \item\begin{description}
         \item[Experimenting And Tuning] Experimented with various combos of optimizers, schedulers, and loss functions, tuning parameters like learning rate penalty weights for stable convergence. 
     \end{description}
     \item \begin{description}
-        \item[Benchmarking] Proposed Separate Optimization as a benchmark, which could be interpreted as a short-sighted perspective against long-term planning by agents in the Joint Optimization.
+        \item[Benchmarking] Proposed Separate Optimization as a benchmark, which could be interpreted as a short-sighted perspective against long-term planning of agents in the Joint Optimization.
     \end{description}
     \item \begin{description}
         \item[Documentation, Typesetting, and GitHub-Publishing] Wrapped the models into well-structured packages and composed READMEs for code instructions. Summarized the period results into an \href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/FBSDE/FinalReports/ReportOverview-MFG-FBSDE.pdf}{Overview Report}. All works are documented and made public in \MFG.  
@@ -161,7 +156,7 @@ Exchange Student \hfill GPA: 4.17/4.33
 \end{itemize}
 
 \hypertarget{integrated-project}{
-    \subsection{Machine Learning In Insurance Pricing And Risk Modeling \normalfont \hfill RA \hfill 2024}}
+    \subsection{Insurance Pricing And Risk Modeling with ML\normalfont \hfill RA \hspace{70pt} 2024.05 - 2024.08}}
 \subsubsection{Columbia University Actuarial Department} 
 \vspace{3pt}
 Supervised and mentored by Carlos (Arocha Association), I collaborated with a team to develop a data-driven insurance pricing strategy, novelly combining ML models with industry practices.
@@ -174,7 +169,7 @@ Supervised and mentored by Carlos (Arocha Association), I collaborated with a te
     \end{description}
 \end{itemize} 
 
-\subsection{Low-carbon Transition of China's Power System \normalfont \hfill RA \hfill 2023} 
+\subsection{Low-carbon Transition of China's Power System \normalfont \hfill RA \hspace{70pt} 2023.02 - 2023.08} 
 \subsubsection{Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation} 
 \vspace{3pt}
 % \begin{adjustwidth}{10pt}{}
@@ -194,27 +189,27 @@ Supervised and mentored by Carlos (Arocha Association), I collaborated with a te
 \hspace{2cm}
 
 \section{Project Experiences} % ================= Projects ================= %
-\subsection{Paired Trading Optimization with Genetic Algorithm \normalfont \hfill 2023}
+\subsection{Pair-Trading Optimization \normalfont \hfill Independent Researcher \hspace{70pt} 2023.08 - 2023.09}
 Innovated a double-bound Bollinger strategy which significantly reduced fluctuations and turnover rate. Then applied Genetic Algorithms (GA) to optimize pair weights with customized fitness functions.
 
-\subsection{WorldQuant Brain Consultant | Alphathon (Gold) \normalfont  \hfill 2023}
+\subsection{WorldQuant Brain \normalfont \hfill Consultant\hspace{70pt} 2023.09 - 2023.12}
 Secured a gold medal (11th place out of 200+ participants) in the Brain x NJU Alphathon 2023. Also contracted as a consultant to provide alpha ideas and received allowances.
 
 \section{Internship Experiences} % ================= Projects ================= %
-\subsection{Higgs Assets \normalfont \hfill High-Freq Quant Researcher \hfill 2024.08 - Present}
+\subsection{Higgs Assets \normalfont \hfill High-Freq Quant Researcher \hspace{70pt} 2024.08 - Present}
 Predicted correlations and developed a peer-grouping system, which will be applied to the multi-attention model in future steps. Working on tuning and packaging the grouping system at present.
-\subsection{TrexQuant Investment \normalfont \hfill GAR Alpha Researcher \hfill 2024.06 - 2024.08}
-Developed alphas based on studies in behavioral finance. Applies regression and clustering techniques.
-\subsection{Chongwen Quantitative \normalfont\hfill Quant Strategy Researcher  \hfill 2023.09 - 2024.02}
+\subsection{TrexQuant Investment \normalfont \hfill Global Alpha Researcher \hspace{70pt} 2024.06 - 2024.08}
+Developed alphas based on studies in behavioral finance. Applied regression and clustering techniques.
+\subsection{Chongwen Quantitative \normalfont\hfill Quant Strategy Researcher  \hspace{70pt} 2023.09 - 2024.02}
 Adapted and optimized the Whitney George Strategy to the Chinese stock market, which has been used for trading since 2024 Q3. Simulated a trading system generating re-balancing instructions for traders.
 
 \section{Skills}
 
 \subsection{Programming}
-Proficient in PyTorch and experienced in deep learning models. Versed in markdown, \LaTeX\ with Overleaf, and Git commands with  GitHub. Also know R, C++, and MATLAB basics through coursework.
+Proficient in PyTorch and experienced in deep learning models. Familiar with markdown, \LaTeX\ with Overleaf, and Git commands with  GitHub. Also know R, C++, and MATLAB basics through coursework.
 
 \subsection{English Proficiency}
-Scored 111/120 in TOEFL and 333/340 in GRE, with overseas experience at Columbia University. 
+Scored 111/120 in TOEFL and 333/340 in GRE, also with overseas experience at Columbia University. 
 
 \subsection{Academic And Professional Typesetting}
 Experienced in delivering academic and professional reports, statements of work, and presentations.
