@@ -1,0 +1,215 @@
+\documentclass[10.5pt,a4paper]{article}
+
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+% % \usepackage{inter} 
+\newcommand{\cmrdefault}{cmr}
+\renewcommand*{\familydefault}{\cmrdefault}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=1cm,
+    bottom=1cm,
+    left=2cm,
+    right=2cm
+}
+\usepackage[
+    skip=10pt,
+    indent=0pt,
+]{parskip}
+\usepackage{changepage}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{$\mygray\bullet$}
+\renewcommand{\labelitemii}{$\mygray\circ$}
+\setlist[itemize,1]{
+    topsep=-7pt,
+    itemsep=-7pt,
+    left=0pt,
+}
+\setlist[itemize,2]{
+    topsep=-9pt,
+    itemsep=-9pt,
+    leftmargin=8pt
+}
+\setlist[enumerate]{
+    topsep=-8pt,
+    itemsep=-6pt,
+    left=20pt,
+    align=left
+}
+\setlist[description]{
+    itemsep=0pt,
+    style=unboxed,
+    leftmargin=0pt,
+    % color=Sepia
+}
+% \doublespacing
+\usepackage[dvipsnames]{xcolor}
+\colorlet{org}{black!100!orange}
+\colorlet{lg}{gray!80!white}
+\newcommand{\org}{\color{org}}
+\newcommand{\mygray}{\color{lg}}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{8pt}{8pt}
+\titlespacing{\subsection}{0pt}{8pt}{1pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{2pt}
+
+\titleformat{\section}{\org\LARGE}{}{}{}[\vspace{0.2pt}\titlerule]
+\titleformat{\subsection}{\bfseries\fontsize{12pt}{12pt}\selectfont}{}{}{}
+\titleformat{\subsubsection}{\bfseries}{}{}{}
+
+\usepackage{xhfill} 
+
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+\hypersetup{ 
+    colorlinks=true,
+    urlcolor=Sepia,
+    pdftitle={My Resume},
+    linkcolor=Sepia,
+    filecolor=Sepia,
+}
+
+% \newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
+\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{my GitHub repository}}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\begin{document}
+%== HEADER ==%
+\begin{center}      
+    {\fontsize{25}{25}\selectfont\bfseries Orange(Yingzhi) Ao} \\ \vspace{9pt}
+    {\org\faEnvelope[regular]}\ \href{mailto:ya2538@columbia.edu}{ya2538@columbia.com} \hfill
+    {\org\faIcon{mobile-alt}}\ \href{tel:+1 9175184578}{+1 917-518-4578} \hfill
+    {\org\faGithub} \href{https://github.com/OrangeAoo}{Visit My GitHub}  \hfill
+    {\org\faLinkedin} \href{http://linkedin.com/in/orange-ao}{Visit My LinkedIn}
+\end{center}
+
+% \section{About me}  %========================== About me ==========================%
+
+% \textit{Cultivated by past related experiences, my keen interest in FBSDEs and stochastic control optimization has led me to pursue a PhD, where I aim to develop innovative methodologies to enhance risk management strategies in dynamic financial environments.}
+
+% {\org \itshape References available upon request.}
+
+\section{Education}  %========================== Edu ==========================%
+
+\subsection{Nanjing University \normalfont \hfill 2021-2025}
+B.A., Financial Engineering \hfill Ranking: 3/31 | GPA: 92/100
+
+\subsection{Columbia University  \normalfont \hfill 2024}
+Exchange Student \hfill GPA: 4.17/4.33
+
+\section{Research Experiences}  %========================== RA ==========================%
+
+\hypertarget{FBSDEs}{
+    \subsection{Multi-Period Compliance MFG-FBSDEs with DL \normalfont \hfill RA \hspace{40pt} 2024.05 - Present}}
+    
+\subsubsection{Columbia University Stats Department}
+\vspace{3pt}
+% \begin{adjustwidth}{10pt}{}
+    Supervised by Prof. Campbell, I set up NN models with Deep FBSDE Solvers for the multi-period MFG in the REC markets, as an extended topic to the single-period model. In the next step, we will make it more realistic by adding more periods and inventory carryforward (or expiration) rules to the current framework.
+% \end{adjustwidth}
+\begin{itemize}
+    \item\begin{description}
+        \item[Innovative Numeric Tricks] We proposed tricks like Logit-Clamp Transformation, mapping $[0,1]$ to $\mathbb{R}$ while providing differentiability for step functions. Also renovated the aforementioned Deep FBSDE Solver with smoothing and scaling layers for greater numeric stability.
+    \end{description}
+    % \item\begin{description}
+    %     \item[Experimenting And Tuning] Experimented with various combos of optimizers, schedulers, and loss functions, tuning parameters like learning rate penalty weights for stable convergence. 
+    % \end{description}
+    \item \begin{description}
+        \item[Instructive Implications] Proposed Separate Optimization as a benchmark, which could be interpreted as a short-sighted perspective against long-term planning of agents in the Joint Optimization.
+    \end{description}
+    \item \begin{description}
+        \item[Documentation and Open-Source] Developed user-friendly and well-structured packages with detailed instructions, which facilitated code usage. Summarized the current research results into an \href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/FBSDE/FinalReports/ReportOverview-MFG-FBSDE.pdf}{Overview Report}. All works have been documented and made public in \MFG.  
+    \end{description}
+\end{itemize}
+
+\hypertarget{integrated-project}{
+    \subsection{Insurance Pricing And Risk Modeling with ML\normalfont \hfill RA \hspace{40pt} 2024.05 - 2024.08}}
+\subsubsection{Columbia University Actuarial Department} 
+\vspace{3pt}
+Supervised and mentored by Carlos (Arocha Association), I collaborated with a team to develop a data-driven insurance pricing strategy, novelly combining ML models with industry practices.
+\begin{itemize}
+    \item\begin{description}
+        \item[Innovative Modeling And Pricing] Trained K-Means to identify risk clusters using diverse policy data. Developed exposure rating models to estimate risk premiums and determine prices for each cluster. 
+    \end{description}
+    \item\begin{description}
+        \item[Professional Reporting And Presenting] Delivered professional research plans, agendas, statements of work, and reports. Presented the findings and pricing strategy advice to clients. 
+    \end{description}
+\end{itemize} 
+
+% \newpage
+\subsection{Low-carbon Transition of China's Power System \normalfont \hfill RA \hspace{40pt} 2023.02 - 2023.08} 
+\subsubsection{Tsinghua-CTG Joint Center for Climate Governance and Low-carbon Transformation} 
+\vspace{3pt}
+% \begin{adjustwidth}{10pt}{}
+    Supervised by the lead researcher Yang Qu, I assisted her team in composing the research report series "Low-Carbon Transition of China’s Power System". My key responsibilities and contributions are:
+% \end{adjustwidth}
+
+\begin{itemize}
+    \item \begin{description}
+        \item[Co-Authorship And Editorial Support] Besides drafting, reviewing, and proofreading the final versions of the reports, I mainly researched and co-authored two major sections of the report series.
+    \end{description}
+    \item \begin{description}
+        \item[Data Collection And Visualization] I gathered and organized data and references for the report series. Also created all figures and tables for the whole series to provide data-driven insights. 
+    \end{description} 
+\end{itemize}
+
+% \newpage
+
+\section{Project Experiences} % ================= Projects ================= %
+\subsection{Pair-Trading Optimization \normalfont \hfill Independent Researcher \hspace{40pt} 2023.08 - 2023.09}
+Innovated a double-bound Bollinger strategy which significantly reduced fluctuations and turnover rate. Then I applied Genetic Algorithms (GA) to optimize pair weights with customized fitness functions.
+
+\subsection{WorldQuant Brain \normalfont \hfill Consultant\hspace{40pt} 2023.09 - 2023.12}
+Secured a gold medal (11th place out of 200+ participants) in the Brain x NJU Alphathon 2023. Also contracted as a consultant to provide alpha ideas and received allowances.
+
+\section{Internship Experiences} % ================= Projects ================= %
+\subsection{Higgs Assets \normalfont \hfill High-Freq Quant Researcher \hspace{40pt} 2024.08 - Present}
+Predicted correlations and developed a peer-grouping system, which will be applied to the multi-attention model in future steps. Working on tuning and packaging the grouping system at present.
+\subsection{TrexQuant Investment \normalfont \hfill Global Alpha Researcher \hspace{40pt} 2024.06 - 2024.08}
+Developed alphas based on studies in behavioral finance. Applied regression and clustering techniques.
+\subsection{Chongwen Quantitative \normalfont\hfill Quant Strategy Researcher  \hspace{40pt} 2023.09 - 2024.02}
+Adapted and optimized the Whitney George Strategy to the Chinese stock market, which has been used for trading since 2024 Q3. Simulated a trading system generating re-balancing instructions for traders.
+
+\section{Relevant Courses}
+\subsection{CS And Stats}
+**DS in Finance And Insurance [A+], Statistical Machine Learning [A], Python, Applied Statistics II: Time Series, *Financial Engineering, *Financial Time Series (in R), *Artificial Intelligence, *Data Mining
+
+\subsection{Mathematics} 
+**Stochastic Processes [A+], Numerical Analysis and Application Software (in MATLAB), Calculus, Discrete Mathematics [top 1], Linear Algebra, ODE, *PDE, *Financial Mathematics
+
+{\mygray
+* is added before courses in progress;\hfill ** is added before grad-level courses.}
+\section{Skills}
+
+\subsection{Programming}
+Proficient in PyTorch and experienced in deep learning models. Familiar with markdown, \LaTeX\ with Overleaf, and Git commands with  GitHub. Also know R, C++, and MATLAB basics through coursework.
+
+\subsection{English Proficiency}
+Scored 111/120 in TOEFL and 333/340 in GRE, also with overseas experience at Columbia University. 
+
+\subsection{Academic And Professional Typesetting}
+Experienced in delivering academic and professional reports, statements of work, and presentations.
+
+\subsection{Team Collaboration And Communication}
+Adaptable in a team through academic and student activities. Skilled in providing constructive feedback.
+
+\vfill
+\begin{center}
+    \textbf{Referrals are available upon request.}
+\end{center}
+% \hfill
+
+\end{document}
