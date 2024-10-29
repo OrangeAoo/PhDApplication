@@ -4,16 +4,16 @@
 \usepackage[T1]{fontenc}
 % \usepackage{lmodern}
 % % \usepackage{inter} 
-\newcommand{\cmrdefault}{cmr}
-\renewcommand*{\familydefault}{\cmrdefault}
+% \newcommand{\cmrdefault}{cmr}
+% \renewcommand*{\familydefault}{\cmrdefault}
 \usepackage{moresize}
 
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{
     a4paper,
-    top=1cm,
-    bottom=1cm,
+    top=0.5cm,
+    bottom=0.5cm,
     left=1.3cm,
     right=1.3cm
 }
@@ -54,7 +54,7 @@
 }
 % \doublespacing
 \usepackage[dvipsnames]{xcolor}
-\colorlet{org}{black!100!orange}
+\colorlet{org}{black!40!orange}
 \colorlet{lg}{gray!90!white}
 \newcommand{\org}{\color{org}}
 \newcommand{\mygray}{\color{lg}}
@@ -64,7 +64,7 @@
 \titlespacing{\subsection}{0pt}{10pt}{0pt}
 \titlespacing{\subsubsection}{0pt}{0pt}{1pt}
 
-\titleformat{\section}{\org\LARGE}{}{}{}[\vspace{0.2pt}\titlerule]
+\titleformat{\section}{\LARGE}{}{}{}[\vspace{0.2pt}\titlerule]
 \titleformat{\subsection}{\bfseries\fontsize{12pt}{12pt}\selectfont}{}{}{}
 \titleformat{\subsubsection}{\bfseries}{}{}{}
 
@@ -73,15 +73,15 @@
 \usepackage[bookmarks=false]{hyperref} % [imp!]
 \hypersetup{ 
     colorlinks=true,
-    urlcolor=Sepia,
+    urlcolor=org,
     pdftitle={My Resume},
-    linkcolor=Sepia,
-    filecolor=Sepia,
+    linkcolor=org,
+    filecolor=org,
 }
 
 % \newcommand{\TCJCGLT}{\href{https://www.jcglt.tsinghua.edu.cn/en/about/introduction.html}{TCJCGLT}}
-\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{my GitHub repository}}
-\newcommand{\Report}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{the Report}}
+\newcommand{\MFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\textbf{my GitHub repository}}}
+\newcommand{\Report}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{\textbf{the Report}}}
 
 \usepackage[page]{totalcount}
 \usepackage{fancyhdr}
@@ -120,10 +120,10 @@ Exchange Student \hfill GPA: 4.17/4.33
 **DS in Finance And Insurance {\small[A+]}, **Predictive Modeling {\small(in R)}, Statistical Machine Learning, Time Series, *Financial Engineering, *Artificial Intelligence, *Data Mining, *Options Investing Algorithms
 
 \subsection{Mathematics} 
-**Stochastic Processes {\small[A+]}, Numerical Analysis {\small(in MATLAB)}, Discrete Mathematics {\small[rank 1/23]}, ODE, *PDE, *Financial Mathematics
+**Stochastic Processes {\small[rank 1]}, Discrete Mathematics {\small[rank 1]}, Numerical Analysis {\small(in MATLAB)}, ODE, *PDE, *Financial Mathematics
 
 {\parskip=2pt \mygray
-* is added before courses in progress;\hfill ** is added before grad-level courses.}
+* Courses in progress.\hfill ** Grad-level courses.}
 \section{Research Experiences}  %========================== RA ==========================%
 
 \hypertarget{FBSDEs}{
@@ -133,16 +133,16 @@ Exchange Student \hfill GPA: 4.17/4.33
 % \vspace{3pt}
 \begin{itemize}
     \item\begin{description}
-        \item[Innovation] To solve \textbf{multi-period MFG} model in REC markets, I renovated \textbf{Deep FBSDE Solvers} and integrated numeric tricks for greater stability.
+        \item[Innovation] To solve \textbf{multi-period MFG} model for REC markets, I renovated \textbf{Deep FBSDE Solvers} and integrated numeric tricks for greater stability.
         \end{description} 
     \item\begin{description}
-        \item[Results] Presented by Prof. Campbell in the 2024 INFORMS Meeting. It will be made more realistic by adding more periods and/or inventory carryforward rules. Please check out \Report\ and \MFG\ for details.
+        \item[Results] Please check out \Report\ and \MFG\ for details. It will be made more realistic by adding more periods and/or inventory carryforward rules. \textit{(Presented by Prof. Campbell in the 2024 INFORMS Meeting.)}
     \end{description}
 \end{itemize} 
 
 \hypertarget{integrated-project}{
     \subsection{Insurance Pricing And Risk Modeling with ML\normalfont \hfill RA \hspace{40pt} 2024.05 - 2024.08}}
-\subsubsection{Supervisor: \href{https://www.linkedin.com/in/carocha/?originalSubdomain=ch}{Carlos Arocha} \hfill Arocha Association, Columbia University} 
+\subsubsection{Supervisors: \href{https://www.linkedin.com/in/carocha/?originalSubdomain=ch}{Carlos Arocha}, \href{https://sps.columbia.edu/person/lina-xu}{Lina Xu} \hfill Arocha Association, Columbia University} 
 \begin{itemize}
     \item\begin{description}
         \item[Innovation] Trained \textbf{K-Means} to identify risk clusters and customized \textbf{exposure rating} models for each cluster to price the insurance policies, which have not been implemented by the industry.
@@ -168,34 +168,41 @@ Exchange Student \hfill GPA: 4.17/4.33
 % \newpage
 
 \section{Project Experiences} % ================= Projects ================= %
-\subsection{Pairs Trading Optimization with GA\normalfont \hfill Independent Researcher \hspace{40pt} 2023.08 - 2023.09}
+\subsection{Pairs Trading Optimization with GA\normalfont \hfill Self Directed \hspace{40pt} 2023.08 - 2023.09}
 Applied \textbf{Genetic Algorithm} to optimize the spread weights in a cointegrated portfolio. Developed an enhanced Bollinger strategy with double bounds to improve timing for trading the optimized spread.
 
 \subsection{WorldQuant Brain \normalfont \hfill Consultant\hspace{40pt} 2023.09 - 2023.12}
 Secured a gold medal (11th place out of 200+ participants) in the 2023 Brain x NJU Alphathon. Also contracted as a consultant to provide alpha ideas and received allowances.
 
-\section{Internship Experiences} % ================= Projects ================= %
-\subsection{Higgs Assets \normalfont \hfill High-Freq Quant Researcher \hspace{40pt} 2024.08 - Present}
-Developed a peer-grouping system using \textbf{Affinity Propagation} combined with \textbf{XGBoost}, which will be applied to boost the Multi-Head Attention Mechanism in the next phase. 
-\subsection{TrexQuant Investment \normalfont \hfill Global Alpha Researcher \hspace{40pt} 2024.06 - 2024.08}
-Developed alphas based on studies in behavioral finance. Applied regression and clustering techniques.
-\subsection{Chongwen Quantitative \normalfont\hfill Quant Strategy Researcher  \hspace{40pt} 2023.09 - 2024.02}
+\section{Industrial Experiences} % ================= Projects ================= %
+\subsection{Higgs Assets \normalfont | Zhejiang, CHN  \hfill High-Freq Quant Researcher \hspace{40pt} 2024.08 - Present}
+Developed a peer-grouping system to identify high-correlated CHN stocks using \textbf{Affinity Propagation} and \textbf{XGBoost}, which will be applied to boost the Multi-Head Attention Mechanism in the next phase. 
+\subsection{TrexQuant \normalfont | Stamford, CT (remote) \hfill Global Alpha Researcher \hspace{40pt} 2024.06 - 2024.08}
+Developed alphas for US stocks based on behavioral finance, incorporating sentiment, analysts and technique data. Applied regression and clustering techniques.
+\subsection{Chongwen Quantitative \normalfont | Beijing, CHN \hfill Quant Strategy Researcher  \hspace{40pt} 2023.09 - 2024.02}
 Adapted and optimized the Whitney George Strategy to the CHN stock market. Built a trading simulation to generate instructions for traders. It's been \textbf{actively used for trading }since 2024 Q2.
 
 
 \section{Skills}
 
 \subsection{Programming}
-Deep Learning with PyTorch, markdown, \LaTeX\, Git commands. Basic R, C++, and MATLAB.
+Proficient: PyTorch, Markdown, \LaTeX\, Git commands. | Basic: R, C++, MATLAB.
 
 \subsection{English Proficiency}
-111/120 in TOEFL and 333/340 in GRE, with overseas experience.
+TOEFL: 111/120; GRE: 333/340 (Quant: 168/170).
 
 \subsection{Writing and Typesetting}
 Academic and professional reports, statements of work, and presentations.
 
 \subsection{Collaboration And Communication}
 Skilled in providing constructive feedback and adaptable in a team through teamwork experience.
+
+\section{Scholarships}
+\begin{itemize}
+    \item Jiangsu Huihong Livestock High Scholarship (5000 RMB) \hfill 2023.12
+    \item Guotai Life Scholarship (2000 RMB) \hfill 2022.01
+    \item People's Scholarship (2000 RMB) \hfill 2022.12
+\end{itemize}
 
 \vfill
 \begin{center}
