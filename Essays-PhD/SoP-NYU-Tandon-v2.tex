@@ -19,7 +19,8 @@
 ]{parskip}
 \setlength{\headheight}{25pt}
 \usepackage{setspace}
-\doublespacing
+\fontsize{12pt}{24pt}\selectfont
+\linespread{2} 
 
 \usepackage{natbib}
 \usepackage{hyperref}
@@ -40,7 +41,7 @@
 
 % Project specific macros
 \newcommand{\MFG}{Multi-Period Compliance MFG with Deep FBSDE Solvers\xspace}
-\newcommand{\Report}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{\textbf{the Report}\xspace}}
+\newcommand{\Report}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{\textbf{the Report}}\xspace}
 \newcommand{\GitHubMFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\textbf{my GitHub repository}}\xspace}
 \newcommand{\Lowcarb}{Low-carbon Transition of China's Power System\xspace} 
 \newcommand{\InsurP}{Insurance Pricing And Risk Modeling with ML\xspace}
@@ -97,28 +98,22 @@
 
 % Prompt 2: Students often have a wide range of ideas and plans for what they hope to achieve after they receive their graduate degree. Tell us what your 5-year plan is after completing a degree from NYU Tandon
 
+My determination to pursue a PhD in the field of stochastic control and optimization is a natural outcome of my academic exploration and industry experiences. Echoing each other, these experiences ignited my great interest in \textbf{SDEs, Principle-Agent problem, and stochastic game}, especially their application in \textbf{green energy markets}. Grad studies at \schoolShort would be my first step toward my long-term goal of a research-driven career in multiple dynamic fields.
 
-My determination to pursue PhD is a natural outcome of my experience as an undergrad at the \textbf{\NJU}(NJU) and as a \textbf{Quant researcher} through internships. In particular, this decision is most greatly driven by my experience as an exchange student in \textbf{\CU}, where I had the privilege of working as an RA under the supervision of \textbf{\SC}. In this role, I modeled \textbf{\MFG}\footnote{The results were presented by \SC in the 2024 INFORMS Meeting in Seattle. See more details in \GitHubMFG.}, which ignited a great passion and sense of direction for my career. I am interested in stochastic control and differential equations (SDEs), machine learning (ML) and deep learning (DL), as well as their applications to high-freq trading and energy markets in particular. Grad studies at \schoolLong would be the first step toward my long-term goal of a research-driven career in these dynamic fields.
+Majoring in Financial Engineering at \NJU, I began my research journey in my sophomore year, when I co-authored the report series China's Low-Carbon Transformation of The Power System at the \TCJC. I was exposed to the energy markets and REC trading in some depth for the first time. In Spring 2024, I had the privilege to be the sole exchange student from my university to study at \CU, where I stood at the top in \SC’s grad-level class, 'Applied Stochastic Processes'. It was Prof. Campbell who opened me the door to stochastic optimization in PA-MFGs problems by taking me as his RA. Under his supervision, I renovated a \textbf{Deep FBSDE Solver} to model the \textbf{multi-period compliance MFG in the REC markets}. With greater numeric stability, the renovated solver modeled how the defaultable agents responded to different penalty policies, their interactions, and market impacts\footnote{The results are summarized in \Report and made open-source on \GitHubMFG.}. This experience only made me eager to dig deeper into PA-MFG, while recognizing there were still many fundamental things to learn.
+
+Upon back to China, I interned as a quant researcher in the high-freq stock trading group at \Higgs. I developed a \textbf{Peer Grouping System} by using the \textbf{Affinity Propagation} and \textbf{XGBoost} to identify top-correlated stock pairs as “peers”, providing a data-driven alternative for the industry grouping that’d be more tailored to high-freq strategies. Compared to the benchmark (i.e. industry), this system tripled the prediction power of most of high-freq technical factors. Resonating with this, I contributed to the research project \InsurP, mentored by the actuary \CA and \LX, training K-Means to identify risk clusters and customizing exposure rating models for each cluster. This innovative insurance policy pricing strategy has not yet been implemented in the industry. These industry experiences not just echoed with each other (in terms of clustering algorithms), but also reinforced my understanding of the research process - it was the tremendous amount of (failed) experiments and attempts that could ultimately bring the creative ideas to life, no matter in the industry or academia. This is why I believe the PhD research training at Tandon will benefit whatever I choose as a future career.
+
+Another big reason why I think of Tandon as the choice for me lies in its resources in my field of interest and its emphasis on the co-evolution of the industry and academic world. As mentioned before, I am especially interested in stochastic controls, the PA-MFG, and their application in energy markets. After thorough research, I realized that Prof. Nizar Touzi is a veteran in this specific field, digging really deep into it for decades (provided a prototype for the discretization approach used in our Deep FBSDE Solver back in 2004). Meanwhile, should I have a chance to pick up Prof. Renyuan Xu’s expertise in deep learning and generative models, I might help bring new perspectives to the theoretical SDEs analysis. Most impressively, NYU Tandon is also the only top program with industry professors (to my knowledge), whose real-world insights will make my research work more practical and thus meaningful.
+
+
+Consequently, upon completing my PhD at NYU Tandon, my 5-year goal is first to gain real-world experience in the green energy market, while contributing my research work to an efficient market design. Afterward, I will commit myself to bridging academia and industry, passing on my experience to the younger talents. 
+
+
+In summary, I believe I bring with me research experience, industry-sharpened programming and soft skills, and above all, a deeply inquisitive nature that drives me to learn and excel. I look forward to the next milestone in my life – a PhD in FRE(ECE) at NYU Tandon.
 
 %% Grade
 % As a Business School student at NJU, the particular courses I found the most intriguing were not my major courses like Microeconomics, but the elective courses I took with the Math/CS majors, like PDE and Discrete Mathematics. The positive feedback of striving for academic excellence and standing top of the class, as well as the fabulous feeling of "flow" when solving math problems and coding, were exactly how I figured out that academic research is THE idea for me. 
-
-%% Intern --> add Carlos project
-Majoring in Financial Engineering, I began my quantitative research internships in my junior year, where I gained experience in building an on-the-fly portfolio monitoring system and developing alphas for US stocks using sentiment and technique data. More recently at \Higgs, I built a Peer Grouping System to identify highly correlated CHN stock pairs (or peers), using \textbf{Affinity Propagation} and \textbf{XGBoost}. The idea is to find a data-driven alternative to the industry factor, which is tailored for the high-freq intraday strategies. It improved the performance\footnote{Measured by model $R^2$ and the Spearman Rank Correlation of predicted and true intraday 60s-returns.} of the simple linear regression model by over 150\%, benchmarked by traditional industry grouping. Next step, this system will be applied to the GRU with multi-head attention. %Currently, I'm examining the dependency of system robustness on the XGBoost accuracy in predicting the correlation of stock pairs' 60s-returns. 
-Resonating with this, I contributed to the research project \textbf{\InsurP} mentored by the actuary \CA and \LX, training \textbf{K-Means} to identify risk clusters and customized \textbf{exposure rating} models for each cluster to price the insurance policies - an innovative strategy that has not been implemented by the industry yet.
-
-It was through these industry experiences that I came to recognize the fundamental and practical value of mathematics and ML, especially in the highly dynamic and evolving markets. And I could strongly relate to the research experience with \SC\ - like any scientific exploration, it is the tremendous experiments and (failed) attempts that make the difference between creative imagination and practical innovation.
-
-%% Research 
-And I want to work on the energy market in-depth. I was fortunately given the research opportunity to delve deeper into SDEs after scoring top in Prof. Steven's grad-level class "Applied Stochastic Process". To accomplish the project I picked up FBSDE-MFG basics and DL with PyTorch, and used them to build up the Neural Network to model the defaultable agents' interaction in REC markets. The results are documented in \GitHubMFG and are summarized in \Report. Relatedly, my research topic \textbf{\Lowcarb} in \textbf{\TCJC} with \YQ equipped me with prior knowledge of green energy markets. In the belief that academics precedes industry in some sense, all these are sending a subtle but critical message to me: energy market design is something that the top researchers in top universities are dedicated to, of which I see a bright future beckoning and feel the urge to prepare myself for it by pursuing a PhD and learn from the world experts.
-
-%% Why NYU-Tandon
-After looking through the top programs in the field, I found that \schoolShort is the only one with industry professors, bringing \NT's vision of the co-evolution of industry and the academic world home. Consequently, with a strong awareness of the fundamental value of mathematics and ML, and with the resolution to commit myself to energy markets (mechanism design in particular), \schoolShort is definitely THE choice. \NT and \RX are faculties I would especially like to work with. I have heard of them from Prof. Campbell and referred to their works when conducting the aforementioned research. An opportunity to work with them is extremely appealing to me. %, who is intrigued by topics of stochastic optimization, FBSDEs, PA problems and MFG modeling. 
-
- %% 5-year plan
-So naturally when it comes to my 5-year plan should I complete the PhD from NYU Tandon, I will commit to the energy market. Should I serve in an energy trading company/public sector, I could contribute my specialization to improving the efficacy of energy transition and distribution. On the other hand, if I find working as a researcher like \NT or \AAb more fascinating, I would dedicate myself to bridging the academic and industry together, passing on my experience to more talented and determined followers.
-
-In a word, I believe I bring with me research experience, industry-sharpened programming and soft skills, and above all, an insatiable desire to learn and excel. I look forward to the next milestone in my life -- a PhD in FRE(ECE) at \schoolShort.
 
 
 %% Why do you wish to attend graduate school? What would you like to study? Keep it broad, details come-in later

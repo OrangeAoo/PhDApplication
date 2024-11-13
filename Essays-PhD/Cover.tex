@@ -1,0 +1,89 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+% \renewcommand{\rmdefault}{phv} % Arial
+% \renewcommand{\sfdefault}{phv} % Arial
+% \usepackage{fontspec}
+% \usepackage{uarial}
+% \setmainfont{Times New Roman}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    a4paper,
+    left=15mm,
+    right=15mm,
+    top=20mm,
+    bottom=16mm
+]{geometry}
+\usepackage[
+    skip=7pt,
+    indent=0pt,
+]{parskip}
+\setlength{\headheight}{26pt}
+
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{xhfill}
+\usepackage{fancyhdr}
+\usepackage[flushmargin, bottom]{footmisc}
+\addtolength{\footnotesep}{-5mm}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+\setlist[description]{
+    itemsep=1cm,
+    style=unboxed,
+    leftmargin=0pt,
+    % color=Sepia
+}
+
+% Project specific macros
+\newcommand{\MFG}{Multi-Period Compliance MFG with Deep FBSDE Solvers\xspace}
+\newcommand{\MFGReport}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{\normalfont{Reported}}\xspace}
+\newcommand{\GitHubMFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\normalfont{my GitHub repository: Multi-Period-Compliance-MFG-FBSDEs}}\xspace}
+\newcommand{\Lowcarb}{Low-carbon Transition of China's Power System\xspace} 
+\newcommand{\InsurP}{Insurance Pricing And Risk Modeling with ML\xspace}
+\newcommand{\IPReport}{\href{https://github.com/OrangeAoo/Insurance-Pricing-Project/blob/intproj/Pres-And-Reports/Final/Final-Report-Insurance-Pricing-2408.pdf}{\normalfont{Reported}}\xspace}
+\newcommand{\GitHubIP}{\href{https://github.com/OrangeAoo/Insurance-Pricing-Project}{\normalfont{my GitHub repository: Insurance-Pricing-Project}}\xspace}
+
+
+% Creates header for each page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Supplementary Materials \hfill Orange Ao \hfill PhD, Fall 2025}
+\renewcommand\headrulewidth{0.2pt}
+
+\begin{document}
+
+\begin{minipage}{\textwidth}
+    \vspace{10cm}
+    \fontsize{22pt}{22pt}\selectfont 
+    Here are the combined reports of my research projects.
+\end{minipage}
+
+\vspace{2cm}
+
+\begin{description}
+    \large
+    \item[$\circ$ Page 2 \ - 16] Multi-period compliance MFG with deep FBSDE solver. 
+    
+    \MFGReport on \GitHubMFG.\\
+    
+    \item[$\circ$ Page 17 - 40] Improving diversified pricing strategy with machine learning. 
+    
+    \IPReport on \GitHubIP.\\
+\end{description}
+
+\vspace{7cm}
+
+\end{document}

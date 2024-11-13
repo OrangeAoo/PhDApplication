@@ -1,0 +1,140 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+% \usepackage{fontspec}
+% \usepackage{uarial}
+% \setmainfont{Times New Roman}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    a4paper,
+    left=15mm,
+    right=15mm,
+    top=18mm,
+    bottom=10mm
+]{geometry}
+\usepackage[
+    skip=5pt,
+    indent=0pt,
+]{parskip}
+\setlength{\headheight}{22pt}
+\usepackage{setspace}
+\fontsize{12pt}{24pt}\selectfont
+\linespread{2} 
+
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage[flushmargin, bottom]{footmisc}
+\addtolength{\footnotesep}{-10mm}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+
+% Project specific macros
+\newcommand{\MFG}{Multi-Period Compliance MFG with Deep FBSDE Solvers\xspace}
+\newcommand{\MFGReport}{\href{https://github.com/OrangeAoo/Multi-Compliance-MFG-FBSDEs/blob/ca6adb57636c1fc1ff9daea8d57f004e5762fd4d/FinalReports/Report-v3.pdf}{\textbf{Reported}}\xspace}
+\newcommand{\GitHubMFG}{\href{https://github.com/OrangeAoo/Multi-Period-Compliance-MFG-FBSDEs}{\textbf{my GitHub repository: Multi-Period-Compliance-MFG-FBSDEs}}\xspace}
+\newcommand{\Lowcarb}{Low-carbon Transition of China's Power System\xspace} 
+\newcommand{\InsurP}{Insurance Pricing And Risk Modeling with ML\xspace}
+\newcommand{\IPReport}{\href{https://github.com/OrangeAoo/Insurance-Pricing-Project/blob/intproj/Pres-And-Reports/Final/Final-Report-Insurance-Pricing-2408.pdf}{\textbf{Reported}}\xspace}
+\newcommand{\GitHubIP}{\href{https://github.com/OrangeAoo/Insurance-Pricing-Project}{\textbf{my GitHub repository: Insurance-Pricing-Project}}\xspace}
+
+% Intern specific macros
+\newcommand{\CW}{Chongwen Quantitative\footnote{Beijing, China. Worked remotely.}\xspace}
+\newcommand{\TQ}{TrexQuant\footnote{Stamford, CT, United States. Worked remotely.}\xspace}
+\newcommand{\Higgs}{Higgs Asset\footnote{Hangzhou, China. Worked onsite.}\xspace}
+
+% School specific macros
+\newcommand{\NJU}{Nanjing University\xspace}
+\newcommand{\THU}{Tsinghua University\xspace}
+\newcommand{\TCJC}{Tsinghua-CTG Joint Center\xspace}
+\newcommand{\CU}{Columbia University\xspace}
+\newcommand{\schoolShort}{NYU Tandon\xspace}
+\newcommand{\schoolLong}{NYU Tandon School of Engineering\xspace}
+\newcommand{\programShort}{FRE-ECE\xspace}
+\newcommand{\programLong}{Department of Finance and Risk Engineering - Electrical Engineering\xspace}
+
+% Profs specific macros
+\newcommand{\SC}{\href{https://www.stevenacampbell.com/}{Prof. Steven Campbell}\xspace}
+\newcommand{\NT}{\href{https://engineering.nyu.edu/faculty/nizar-touzi}{Prof. Nizar Touzi}\xspace}
+\newcommand{\RX}{\href{https://engineering.nyu.edu/faculty/renyuan-xu}{Prof. Renyuan Xu}\xspace}
+\newcommand{\AT}{Prof. Agnes Tourin\xspace}
+\newcommand{\AAb}{Prof. Amine Mohamed Aboussalah\xspace}
+\newcommand{\YQ}{Yang Qu (Postdoctoral Fellow)\xspace}
+\newcommand{\CA}{\href{https://www.linkedin.com/in/carocha/?originalSubdomain=ch}{Carlos Arocha}\xspace}
+\newcommand{\LX}{\href{https://sps.columbia.edu/person/lina-xu}{Prof. Lina Xu}}
+\newcommand{\YW}{\href{https://sps.columbia.edu/person/yubo-wang-phd}{Prof. Yubo Wang}\xspace}
+\newcommand{\Tom}{\href{https://sps.columbia.edu/person/thomas-murphy}{Prof. Thomas Murphy}\xspace}
+\newcommand{\Ira}{\href{https://sps.columbia.edu/person/ira-kastrinsky}{Prof. Ira Kastrinsky}\xspace}
+
+% Creates header for each page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\header\hskip\linepagesep\vfootline\thepage}
+\newskip\linepagesep \linepagesep 5pt\relax
+\def\vfootline{%
+    \begingroup
+    	\rule[-10pt]{0.75pt}{25pt}
+    \endgroup
+}
+\def\header{%
+\small
+\begin{minipage}{150pt}
+    \hfill Orange Ao 	% Applicant Name
+   \par \hfill Tandon FRE, PhD, Fall 2025 % Area, Program, Cycle, Year
+\end{minipage}
+}
+\fancyhead[L]{\small\textbf{Prompt 1 | Learn My Curve Pattern from the Past}}
+\renewcommand\headrulewidth{0.2pt}
+
+\begin{document}
+
+For both me and you, we are now building a model - training from my past and predicting my future performance as a PhD. Since inferring solely from the limited, polished track records (\textit{dot coordinates}) in CV would increase bias or lead to underfitting, I'd rather focus on the \textit{first and second-order derivatives} (denoted as $f'$ and $f''$) of my curve and where it leads to in this essay.
+
+A year ago, I made a bold decision to independently apply for an exchange at \CU at the cost of suspending my studies at \NJU (NJU), as it didn't officially cooperate with Columbia. I also risked not earning enough credits to graduate, since they were not eligible for transfer back to NJU\footnote{This would also explain the gap on my NJU transcript in Spring 2024.}. Still, I pursued this path with the belief that the greater resources at Columbia would make it cost-beneficial. Aware of the heightened risks compared to typical exchange students, I was more driven to excel in courses and to seize every opportunity that came my way. And I was right - had I not spent the 8 months at Columbia, I'd never have made the invaluable connections with the professors who helped uncover my potential for PhD research.
+
+So I want to highlight my research processes since then. Exposed to an unfamiliar field of insurance pricing, I picked up the basics quickly and incorporated my strength in ML into the project mentored by actuary \CA\footnote{Also under the supervision of \LX, \YW, \Tom, and \Ira.}. I adopted K-Means to identify risk clusters and customized exposure rating models for each cluster - an innovative pricing approach\footnote{\IPReport and made open-source in \GitHubIP.} that has yet to be implemented in the industry. This later inspired me to develop a Peer Grouping System as a quantitative researcher intern, combining the Affinity Propagation and XGBoost to provide a data-driven alternative for the industry grouping that is better suited for high-frequency strategies. 
+
+Then \SC introduced me to stochastic optimization. Under his supervision, I took an independent approach to mastering PyTorch and developed Deep FBSDE Solvers into user-friendly packages\footnote{\MFGReport and made open-source in \GitHubMFG.} in 2 months. I especially loved the philosophical lessons from modeling how defaultable agents with different strategies responded to penalty policies: don't be blinded by the current \textit{coordinate}, always plan ahead, and invest in $f'$ and $f''$ early. 
+
+\newpage
+\fancyhf{}
+\fancyhead[R]{\header\hskip\linepagesep\vfootline\thepage}
+\newskip\linepagesep \linepagesep 5pt\relax
+\def\vfootline{%
+    \begingroup
+    	\rule[-10pt]{0.75pt}{25pt}
+    \endgroup
+}
+\def\header{%
+\small
+\begin{minipage}{150pt}
+    \hfill Orange Ao 	% Applicant Name
+   \par \hfill Tandon FRE, PhD, Fall 2025 % Area, Program, Cycle, Year
+\end{minipage}
+}
+\fancyhead[L]{\small\textbf{Prompt 2 | Predict My Curve Growth in the Future}}
+
+"Why the hell am I doing this?" was the question asked by myself thousands of times on my marathon track, and will be asked another thousand of times during my PhD. True, a PhD entails long years, low pay, and often, frustrations from no immediate progress. But I am more afraid of the prescribed path with sublinear growth as I age. As a marathoner focused on the finish line, I’m after something big - building an avant-garde business. While I can’t predict precisely the steps in my “5-year plan” since there is randomness in everything and the nature of my business may evolve based on market conditions, nontheless, I do anticipate almost surely the exponential curve upon completing my PhD.
+
+In my analogy, a PhD degree would just be another \textit{coordinate} of my track record and new starting point. What truly attracts me are $f'$ and $f''$ coming along the journey. $f'$ is the resources gathered during my PhD (such as skills, knowledge and connections), indicating the speed at which I achieve my future goal. And $f''$ determines the expansion rate of resource - traits like persistence and flexibility honed through years of toil and grind, the ability to marshal resources through fundraising, and the alertness to spot and seize opportunities.
+
+And Tandon FRE stands at the top of my list for its great resources. As the only program with industry professors to my knowledge, it has strong industry connections. Also, it strikes a perfect balance between breadth and depth: the faculty's expertise spans a wide range of topics, yet each professor focuses deeply on a specific area. I am particularly drawn to \NT’s theoretical study of the Principle-Agent problem, as well as \RX's extensive research on generative models applied to stochastic controls. These areas not only align closely with my research interests but also will equip me with the fundamental tools to model the world of chaos.
+
+In summary, my PhD is not just about earning a degree; it's an investment in $f'$ and $f''$, acquiring the resources and traits essential to build something transformative. With Tandon FRE's expertise in stochastic modeling and strong industry connections, I will be well-positioned to pursue my entrepreneurial goal in dynamic markets. I look forward to the upcoming PhD marathon at Tandon.
+
+\end{document}
+
+% That's All Folks.
+
+% Best of luck, you got this! :)
